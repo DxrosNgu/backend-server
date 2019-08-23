@@ -6,11 +6,11 @@ const SEED = require('../config/config').SEED;
 // Verificar el token
 // =========================================
 exports.verificaToken = function(req, res, next){
-    var token = req.query.token;
+    const token = req.query.token;
 
     jwt.verify(token, SEED, (err,decoded )=>{
         if(err){
-            res.status(401).json({
+            return res.status(401).json({
                 ok: true,
                 mensaje: 'Token incorrecto',
                 errors: err
