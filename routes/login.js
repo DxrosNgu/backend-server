@@ -1,109 +1,121 @@
 var express = require('express');
 var bcrypt = require('bcryptjs');
 var jwt = require('jsonwebtoken');
-const CLIENT_ID =  require('../config/config').CLIENT_ID;
-const SEED = require('../config/config').SEED;
-const app = express();
-const {OAuth2Client} = require('google-auth-library');
-const client = new OAuth2Client(CLIENT_ID);
 
+const SEED = require('../config/config').SEED;
+
+const app = express();
 const Usuario = require('../models/usuario');
+
+const {OAuth2Client} = require('google-auth-library');
+//var OAuth2 = google.auth.OAuth2;
+// const auth = new OAuth2Client();
+
+const GOOGLE_CLIENT_ID = require('../config/config').GOOGLE_CLIENT_ID;
+const GOOGLE_SECRET = require('../config/config').GOOGLE_SECRET;
 //=============================
 // Autentificación de Google
 //=============================
-async function verify(token) {
-    const ticket = await client.verifyIdToken({
+app.post('/google', (req, res) => {
+
+    const token = req.body.token || 'XXX';
+
+
+    const client = new OAuth2Client(GOOGLE_CLIENT_ID, GOOGLE_SECRET, '');
+
+    client.verifyIdToken({
         idToken: token,
-        audience: CLIENT_ID,  // Specify the CLIENT_ID of the app that accesses the backend
+        audience: GOOGLE_CLIENT_ID,
         // Or, if multiple clients access the backend:
-        //[CLIENT_ID_1, CLIENT_ID_2, CLIENT_ID_3]
-    });
+        //[CLIENT_ID_1, CLIENT_ID_2, CLIENT_ID_3],
+    }, function (e, login) {
 
-    const payload = ticket.getPayload();
-    const userid = payload['sub'];
-    // If request specified a G Suite domain:
-    //const domain = payload['hd'];
-    return {
-        nombre: payload.name,
-        email: payload.email,
-        img: payload.picture,
-        google: true
-    };
-}
-
-app.post('/google', async (req, res) => {
-    var token = req.body.token;
-
-    var GoogleUser = await verify(token)
-        .catch(e => {
-            res.status(403).json({
+        if (e) {
+            return res.status(400).json({
                 ok: true,
-                mensaje: 'Token no válido'
-            });
-        }
-    );
-
-    Usuario.findOne({email:GoogleUser.nombre},(err, usuarioDB) => {
-
-        if(err){
-            return res.status(500).json({
-                ok: false,
-                mensaje: 'Error al buscar usuario',
-                errors: err
+                mensaje: 'Token no válido',
+                errors: e
             });
         }
 
-        if( usuarioDB){
-            if(usuarioDB.google === false){
-                return res.status(400).json({
-                    ok: false,
-                    mensaje: 'Debe de usar su autenticación normal'
-                });
-            } else {
-                var token = jwt.sign({ usuario: usuarioDB}, SEED, { expiresIn: 14400}); // 4 horas
+        var payload = login.getPayload();
+        var userid = payload['sub'];
+        // If request specified a G Suite domain:
+        //var domain = payload['hd'];
 
-                res.status(200).json({
+        Usuario.findOne({email: payload.email}, (err, usuario) => {
+
+            if (err) {
+                return res.status(500).json({
                     ok: true,
-                    usuario: usuarioDB,
-                    token: token,
-                    id: usuarioDB._id
+                    mensaje: 'Error al buscar usuario - login',
+                    errors: err
                 });
             }
-        } else {
-            // El usuario no existe... crear nuevo usuario
-            var usuario = new Usuario();
 
-            usuario.nombre = GoogleUser.nombre;
-            usuario.email =  GoogleUser.email;
-            usuario.img = GoogleUser.img;
-            usuario.google = true;
-            usuario.password = ':)';
+            if (usuario) {
+                if (usuario.google === false) {
+                    return res.status(400).json({
+                        ok: true,
+                        mensaje: 'Debe de usar su autenticación normal'
+                    });
+                } else {
+                    usuario.password = ':)';
+                    var token = jwt.sign({usuario: usuario}, SEED, {expiresIn: 14400}); // 4 horas
+                    res.status(200).json({
+                        ok: true,
+                        usuario: usuario,
+                        token: token,
+                        id: usuario._id
+                    });
+                }
+                // Si el usuario no existe por correo
+            } else {
 
-            usuario.save((err, usuarioDB) => {
+                var usuario = new Usuario();
 
-                var token = jwt.sign({ usuario: usuarioDB}, SEED, { expiresIn: 14400}); // 4 horas
+                usuario.nombre = payload.name;
+                usuario.email = payload.email;
+                usuario.password = ':)';
+                usuario.img = payload.picture;
+                usuario.google = true;
 
-                res.status(200).json({
-                    ok: true,
-                    usuario: usuarioDB,
-                    token: token,
-                    id: usuarioDB._id
+                usuario.save((err, usuarioDB) => {
+
+                    if (err) {
+                        return res.status(500).json({
+                            ok: true,
+                            mensaje: 'Error al crear usuario - google',
+                            errors: err
+                        });
+                    }
+
+                    var token = jwt.sign({usuario: usuarioDB}, SEED, {expiresIn: 14400}); // 4 horas
+
+                    res.status(200).json({
+                        ok: true,
+                        usuario: usuarioDB,
+                        token: token,
+                        id: usuarioDB._id
+                    });
                 });
+            }
+        });
 
-            });
-        }
+    }, (err, login) => {
+        console.log(login);
     });
 });
 //=============================
 // Autentificación normal
 //=============================
-app.post('/', (req,res) =>{
+app.post('/', (req, res) => {
 
     var body = req.body;
 
-    Usuario.findOne({email: body.email}, (err, usuarioDB) =>{
+    Usuario.findOne({email: body.email}, (err, usuarioDB) => {
 
-        if(err){
+        if (err) {
             return res.status(500).json({
                 ok: false,
                 mensaje: 'Error al buscar usuario',
@@ -111,7 +123,7 @@ app.post('/', (req,res) =>{
             });
         }
 
-        if(!usuarioDB){
+        if (!usuarioDB) {
             return res.status(400).json({
                 ok: false,
                 mensaje: 'Credenciales incorrectas - email',
@@ -119,7 +131,7 @@ app.post('/', (req,res) =>{
             });
         }
 
-        if(!bcrypt.compareSync(body.password, usuarioDB.password)){
+        if (!bcrypt.compareSync(body.password, usuarioDB.password)) {
             return res.status(400).json({
                 ok: false,
                 mensaje: 'Credenciales incorrectas - password',
@@ -128,7 +140,7 @@ app.post('/', (req,res) =>{
         }
         //Crear un token!!!
         usuarioDB.password = 'lol';
-        var token = jwt.sign({ usuario: usuarioDB}, SEED, { expiresIn: 14400}); // 4 horas
+        var token = jwt.sign({usuario: usuarioDB}, SEED, {expiresIn: 14400}); // 4 horas
 
         res.status(200).json({
             ok: true,

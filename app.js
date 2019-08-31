@@ -1,14 +1,34 @@
 // Requires
-var express = require('express');
-var mongoose = require('mongoose');
-var bodyParser = require('body-parser');
+const express = require('express');
+const mongoose = require('mongoose');
+const bodyParser = require('body-parser');
+const cors = require('cors');
 
+var rawBodyHandler = function (req, res, buf, encoding) {
+    if (buf && buf.length) {
+        req.rawBody = buf.toString(encoding || 'utf8');
+        console.log('Raw body: ' + req.rawBody);
+    }
+}
 //Inicializando variables
 var app= express();
 
+//CORS
+app.use(function(req, res, next) {
+    res.header("Access-Control-Allow-Origin", "*");
+    res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+    res.header("Access-Control-Allow-Methods", "POST, GET, PUT, DELETE, OPTIONS");
+    next();
+});
+// app.use(cors({origin:"http://localhost:4200"}));
+
+//app.options('*', cors());
 //BodyParser
-app.use(bodyParser.urlencoded({ extented: false}));
+// parse application/x-www-form-urlencoded
+app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
+//app.use(bodyParser.json());
+//app.use(cors());
 
 //Importar rutas
 var appRoutes = require('./routes/app');
