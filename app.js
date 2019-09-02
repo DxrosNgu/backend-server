@@ -47,9 +47,9 @@ mongoose.connection.openUri('mongodb://localhost:27017/hospitalDB', { useNewUrlP
         console.log('Conexión correcta a la base de datos: \x1b[32m%s\x1b[0m', 'OK');
     });
 //Server index config
-var serveIndex = require('serve-index');
-app.use(express.static(__dirname + '/'))
-app.use('/upload', serveIndex(__dirname + '/upload'));
+//var serveIndex = require('serve-index');
+//app.use(express.static(__dirname + '/'))
+//app.use('/upload', serveIndex(__dirname + '/upload'));
 
 
 //Rutas

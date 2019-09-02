@@ -82,7 +82,7 @@ function subirPorTipo(tipo, id, nombreArchivo, res){
                 });
             }
 
-            var pathViejo = './upload/usuarios/'+ usuario.img;
+            var pathViejo = '../upload/usuarios/'+ usuario.img;
 
             //Si existe, elimina la imagen anterior
             if(fs.existsSync(pathViejo)){
@@ -94,7 +94,7 @@ function subirPorTipo(tipo, id, nombreArchivo, res){
                return res.status(200).json({
                     ok: true,
                     mensaje: 'Imagen de usuario actualizada',
-                    usuario:UsuarioActualizado
+                    usuario: UsuarioActualizado
                 });
             });
         });
@@ -108,7 +108,7 @@ function subirPorTipo(tipo, id, nombreArchivo, res){
                     errors: { message:  'Medico no existente'}
                 });
             }
-            var pathViejo = './upload/medicos/'+ medico.img;
+            var pathViejo = '../upload/medicos/'+ medico.img;
 
             //Si existe, elimina la imagen anterior
             if(fs.existsSync(pathViejo)){
@@ -135,7 +135,7 @@ function subirPorTipo(tipo, id, nombreArchivo, res){
                     errors: { message:  'Hospital no existente'}
                 });
             }
-            var pathViejo = './uploads/hospitales/'+ hospital.img;
+            var pathViejo = '../upload/hospitales/'+ hospital.img;
 
             //Si existe, elimina la imagen anterior
             if(fs.existsSync(pathViejo)){
