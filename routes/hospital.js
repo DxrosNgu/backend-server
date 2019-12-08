@@ -6,19 +6,58 @@ var mdAutenticacion = require('../middleware/autenticacion');
 const app = express();
 
 const Hospital = require('../models/hospital');
+//=============================
+// Obtener Hospital por ID
+//=============================
+app.get('/:id', (req, res, next) =>{
+    var id = req.params.id;
+    console.log(req);
+    Hospital.findById(id)
+        .populate('usuario','nombre img email')
+        .exec((err, hospital) => {
+            if(err) {
+                return res.status(500).json({
+                    ok: false,
+                    mensaje: 'Error al buscar hospital',
+                    errors: err
+                });
+            }
 
+            if(!hospital){
+                return  res.status(400).json({
+                    ok: false,
+                    mensaje: 'El hospital con el Id ' + id + ' no existe',
+                    errors: {message: 'No existe un hospital con ese ID'}
+                });
+            }
+
+            res.status(200).json({
+                ok: true,
+                hospital: hospital
+            });
+        });
+});
 //=========================================
 // Obtener todos los hospitales
 //=========================================
 app.get('/', (req, res, next) => {
 
-    var desde = req.query.desde || 0;
+    let desde;
+    let limit;
+    if(req.query.desde != null){
+        desde = req.query.desde || 0;
+        limit = 5;
+    } else {
+        desde = 0;
+        limit = 100;
+    }
+
     desde = Number(desde);
 
     Hospital.find({})
         .populate('usuario', 'nombre email')
         .skip(desde)
-        .limit(5)
+        .limit(limit)
         .exec((err, hospitales) => {
             if (err) {
                 res.status(500).json({
@@ -139,7 +178,7 @@ app.delete('/:id', mdAutenticacion.verificaToken, (req, res) => {
         }
         res.status(200).json({
             ok: true,
-            usuario: hospitalBorrado
+            hospital: hospitalBorrado
         });
     });
 });
