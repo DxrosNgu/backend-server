@@ -40,7 +40,7 @@ app.get('/', (req, res, next) => {
 //=========================================
 // Actualizar un nuevo usuario
 // =========================================
-app.put('/:id',mdAutenticacion.verificaToken, (req, res) => {
+app.put('/:id',[mdAutenticacion.verificaToken, mdAutenticacion.verificaAdminRoleMismoUsuario], (req, res) => {
     const id = req.params.id;
     const body = req.body;
 
@@ -98,7 +98,7 @@ app.post('/', (req, res)=> {
         role: body.role
     });
 
-    usuario.save( (err,usuarioGuardado) =>{
+    usuario.save((err,usuarioGuardado) =>{
         if(err){
             res.status(400).json({
                 ok: true,
@@ -106,7 +106,7 @@ app.post('/', (req, res)=> {
                 errors: err
             });
         }
-        res.status(200).json({
+        res.status(201).json({
             ok: true,
             usuario: usuarioGuardado,
             usuariotoken: req.usuario
@@ -116,7 +116,7 @@ app.post('/', (req, res)=> {
 //=========================================
 // Eliminar un nuevo usuario
 // ========================================
-app.delete('/:id',mdAutenticacion.verificaToken, (req, res)=> {
+app.delete('/:id',[mdAutenticacion.verificaToken, mdAutenticacion.verificaAdminRole], (req, res)=> {
     var id = req.params.id;
 
     Usuario.findByIdAndRemove(id, (err, usuarioBorrado)=>{

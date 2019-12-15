@@ -2,29 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d25de37b-b41c-439c-8e0c-5c1146f8c8c6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/upload/hospitales/5d5919026723de2894692814-706.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/upload/hospitales/5d5922acc799273a9c7e3646-283.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/upload/hospitales/5d5922acc799273a9c7e3646-450.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/upload/hospitales/5d751edda1675a21040581e4-655.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/upload/medicos/5decf0d7e19c0b27c86f241a-502.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/upload/medicos/5decf0d7e19c0b27c86f241a-64.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/upload/medicos/5decf0d7e19c0b27c86f241a-786.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/upload/medicos/5ded0e9b7972122ea8787345-687.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/upload/medicos/5ded1c895149142318a452fa-243.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/upload/usuarios/5d522e33c7559346c44b011f-131.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/upload/usuarios/5d524859ba6b9d44dc85578e-20.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/upload/usuarios/5d524859ba6b9d44dc85578e-25.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/upload/usuarios/5d524859ba6b9d44dc85578e-391.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/upload/usuarios/5d524859ba6b9d44dc85578e-512.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/upload/usuarios/5d524859ba6b9d44dc85578e-573.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/upload/usuarios/5d524859ba6b9d44dc85578e-705.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/upload/usuarios/5d62d4d23acdb029b8370de7-681.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/upload/usuarios/5d6c84cabfcace06d882ff98-947.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/hospital.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/hospital.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/medicos.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/medicos.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/upload.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/upload.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/middleware/autenticacion.js" beforeDir="false" afterPath="$PROJECT_DIR$/middleware/autenticacion.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/busquedas.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/busquedas.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/login.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/usuario.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/usuario.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -37,56 +20,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/routes/usuario.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-711">
-              <caret line="11" column="20" selection-start-line="11" selection-start-column="20" selection-end-line="11" selection-end-column="20" />
+            <state relative-caret-position="368">
+              <caret line="113" column="7" lean-forward="true" selection-start-line="113" selection-start-column="7" selection-end-line="113" selection-end-column="7" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/routes/hospital.js">
+        <entry file="file://$PROJECT_DIR$/middleware/autenticacion.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="12" column="23" selection-start-line="12" selection-start-column="23" selection-end-line="12" selection-end-column="23" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/models/medicos.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="6" column="41" selection-start-line="6" selection-start-column="33" selection-end-line="6" selection-end-column="41" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/routes/medicos.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="208">
-              <caret line="98" column="24" lean-forward="true" selection-start-line="98" selection-start-column="24" selection-end-line="98" selection-end-column="24" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/models/usuario.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="22" selection-start-line="22" selection-end-line="22" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/routes/imagenes.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="8" column="15" selection-start-line="8" selection-start-column="11" selection-end-line="8" selection-end-column="15" />
+            <state relative-caret-position="850">
+              <caret line="50" selection-start-line="50" selection-end-line="50" />
             </state>
           </provider>
         </entry>
@@ -115,6 +62,7 @@
       <find>/img</find>
       <find>`findOneAndDelete</find>
       <find>findOneAndDelete</find>
+      <find>obtenerMenu</find>
     </findStrings>
     <dirStrings>
       <dir>E:\Workspace\webstorm\backend-server</dir>
@@ -135,27 +83,27 @@
         <option value="$PROJECT_DIR$/models/medico.js" />
         <option value="$PROJECT_DIR$/routes/app.js" />
         <option value="$PROJECT_DIR$/models/hospital.js" />
-        <option value="$PROJECT_DIR$/middleware/autenticacion.js" />
-        <option value="$PROJECT_DIR$/routes/busquedas.js" />
         <option value="$PROJECT_DIR$/READme.md" />
         <option value="$PROJECT_DIR$/models/usuario.js" />
         <option value="$PROJECT_DIR$/config/config.js" />
-        <option value="$PROJECT_DIR$/routes/login.js" />
-        <option value="$PROJECT_DIR$/app.js" />
         <option value="$PROJECT_DIR$/routes/imagenes.js" />
-        <option value="$PROJECT_DIR$/routes/usuario.js" />
         <option value="$PROJECT_DIR$/routes/upload.js" />
         <option value="$PROJECT_DIR$/models/medicos.js" />
         <option value="$PROJECT_DIR$/routes/hospital.js" />
         <option value="$PROJECT_DIR$/routes/medicos.js" />
+        <option value="$PROJECT_DIR$/app.js" />
+        <option value="$PROJECT_DIR$/routes/busquedas.js" />
+        <option value="$PROJECT_DIR$/routes/login.js" />
+        <option value="$PROJECT_DIR$/middleware/autenticacion.js" />
+        <option value="$PROJECT_DIR$/routes/usuario.js" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-412" />
-    <option name="y" value="88" />
-    <option name="width" value="1940" />
-    <option name="height" value="1050" />
+    <option name="x" value="635" />
+    <option name="y" value="110" />
+    <option name="width" value="980" />
+    <option name="height" value="1040" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -165,8 +113,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -188,14 +134,16 @@
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1575820393243" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../Intellij/adminpro" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1575826180525" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../containerappbackend" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -253,6 +201,13 @@
       <workItem from="1569093695154" duration="599000" />
       <workItem from="1569171690494" duration="266000" />
       <workItem from="1575740347439" duration="74000" />
+      <workItem from="1575895863590" duration="1301000" />
+      <workItem from="1575947476163" duration="1391000" />
+      <workItem from="1576028153290" duration="4826000" />
+      <workItem from="1576251393329" duration="5225000" />
+      <workItem from="1576329562700" duration="3159000" />
+      <workItem from="1576427298825" duration="935000" />
+      <workItem from="1576434702958" duration="3749000" />
     </task>
     <task id="LOCAL-00001" summary="Revert &quot;first commit&quot;&#10;&#10;This reverts commit fc5044a0">
       <created>1565535549249</created>
@@ -303,25 +258,31 @@
       <option name="project" value="LOCAL" />
       <updated>1567400650353</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Fin de la sección 16: Correcciones y servicios de busqueda agregados">
+      <created>1575820986925</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1575820986926</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="117935000" />
+    <option name="totallyTimeSpent" value="139529000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="7" />
+    <editor active="true" />
     <layout>
-      <window_info id="Designer" />
-      <window_info id="Image Layers" />
-      <window_info id="Capture Tool" />
-      <window_info id="UI Designer" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49885058" visible="true" weight="0.15570469" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49885058" visible="true" weight="0.16912752" />
       <window_info id="Structure" order="1" sideWeight="0.5011494" side_tool="true" weight="0.24983476" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" />
-      <window_info anchor="bottom" id="Database Changes" />
+      <window_info id="Designer" order="4" />
+      <window_info id="Image Layers" order="5" />
+      <window_info id="Capture Tool" order="6" />
+      <window_info id="UI Designer" order="7" />
       <window_info anchor="bottom" id="TypeScript" order="0" />
       <window_info anchor="bottom" id="Message" order="1" />
       <window_info anchor="bottom" id="Find" order="2" weight="0.32855567" />
@@ -333,16 +294,18 @@
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="9" sideWeight="0.49834764" weight="0.3286119" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50363517" side_tool="true" weight="0.3286119" />
-      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.49636483" weight="0.6303116" />
-      <window_info anchor="right" id="Maven" />
-      <window_info anchor="right" id="Palette" />
-      <window_info anchor="right" id="Capture Analysis" />
-      <window_info anchor="right" id="Database" />
-      <window_info anchor="right" id="Palette&#9;" />
-      <window_info anchor="right" id="Theme Preview" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="11" sideWeight="0.49636483" visible="true" weight="0.3385269" />
+      <window_info anchor="bottom" id="Messages" order="12" />
+      <window_info anchor="bottom" id="Database Changes" order="13" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Maven" order="3" />
+      <window_info anchor="right" id="Palette" order="4" />
+      <window_info anchor="right" id="Capture Analysis" order="5" />
+      <window_info anchor="right" id="Database" order="6" />
+      <window_info anchor="right" id="Palette&#9;" order="7" />
+      <window_info anchor="right" id="Theme Preview" order="8" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -405,7 +368,8 @@
     <MESSAGE value="Sección 11 TERMINADA" />
     <MESSAGE value="Sección 12 TERMINADA" />
     <MESSAGE value="actualizando deprecados" />
-    <option name="LAST_COMMIT_MESSAGE" value="actualizando deprecados" />
+    <MESSAGE value="Fin de la sección 16: Correcciones y servicios de busqueda agregados" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fin de la sección 16: Correcciones y servicios de busqueda agregados" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/node_modules/.gitignore" />
@@ -421,13 +385,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
           <caret line="457" column="12" selection-start-line="457" selection-start-column="12" selection-end-line="457" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/middleware/autenticacion.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
         </state>
       </provider>
     </entry>
@@ -489,13 +446,6 @@
     <entry file="file://$PROJECT_DIR$/upload/usuarios/5d524859ba6b9d44dc85578e-705.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/routes/login.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-7">
-          <caret line="79" column="27" selection-start-line="79" selection-start-column="24" selection-end-line="79" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/upload/hospitales/5d5919026723de2894692814-706.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
@@ -506,24 +456,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/routes/imagenes.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="15" selection-start-line="8" selection-start-column="11" selection-end-line="8" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/routes/app.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
           <caret line="10" column="7" lean-forward="true" selection-start-line="10" selection-start-column="7" selection-end-line="10" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="45" column="26" lean-forward="true" selection-start-line="45" selection-start-column="26" selection-end-line="45" selection-end-column="26" />
         </state>
       </provider>
     </entry>
@@ -534,38 +470,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/models/usuario.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="22" selection-start-line="22" selection-end-line="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/models/hospital.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
           <caret line="6" column="11" selection-start-line="6" selection-start-column="11" selection-end-line="6" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/routes/usuario.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-711">
-          <caret line="11" column="20" selection-start-line="11" selection-start-column="20" selection-end-line="11" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/routes/busquedas.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="895">
-          <caret line="66" column="25" selection-start-line="66" selection-start-column="9" selection-end-line="66" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/models/medicos.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="41" selection-start-line="6" selection-start-column="33" selection-end-line="6" selection-end-column="41" />
         </state>
       </provider>
     </entry>
@@ -576,10 +484,66 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/models/medicos.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="41" selection-start-line="6" selection-start-column="33" selection-end-line="6" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/routes/medicos.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="208">
-          <caret line="98" column="24" lean-forward="true" selection-start-line="98" selection-start-column="24" selection-end-line="98" selection-end-column="24" />
+        <state relative-caret-position="385">
+          <caret line="75" column="23" selection-start-line="75" selection-start-column="23" selection-end-line="75" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/busquedas.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="137">
+          <caret line="35" selection-start-line="35" selection-end-line="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/login.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="182" column="70" selection-start-line="182" selection-start-column="70" selection-end-line="182" selection-end-column="70" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="385">
+          <caret line="60" column="2" selection-start-line="60" selection-start-column="2" selection-end-line="60" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/imagenes.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="15" selection-start-line="8" selection-start-column="11" selection-end-line="8" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/usuario.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="21" selection-start-line="21" selection-end-line="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/usuario.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="368">
+          <caret line="113" column="7" lean-forward="true" selection-start-line="113" selection-start-column="7" selection-end-line="113" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/middleware/autenticacion.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="850">
+          <caret line="50" selection-start-line="50" selection-end-line="50" />
         </state>
       </provider>
     </entry>

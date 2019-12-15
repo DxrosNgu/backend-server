@@ -58,7 +58,7 @@ app.use('/medico', appMedico);
 app.use('/usuario',appUsuario);
 app.use('/login',loginRoutes);
 app.use('/busqueda', busquedaRoutes);
-app.use('/coleccion', busquedaRoutes);
+//app.use('/coleccion', busquedaRoutes);
 app.use('/upload', uploadRoutes);
 app.use('/img', imagenesRoutes);
 app.use('/',appRoutes);
