@@ -109,7 +109,7 @@ app.post('/', (req, res)=> {
         res.status(201).json({
             ok: true,
             usuario: usuarioGuardado,
-            usuariotoken: req.usuarioefaefa
+            usuariotoken: req.usuarioefae
         });
     });
 });
